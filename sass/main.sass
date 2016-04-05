@@ -1,0 +1,81 @@
+$not-found: #666666
+*
+    margin: 0
+    padding: 0
+
+
+html,
+body
+    font-family: Arial, sans-serif
+    height: 100%
+    font-size: 16px
+
+.flex-container
+    width: 100%
+    height: 100%
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    display: -moz-flex
+    display: -webkit-flex
+    display: flex
+    -moz-flex-direction: column
+    -webkit-flex-direction: column
+    flex-direction: column
+    -moz-align-items: center
+    -webkit-align-items: center
+    align-items: center
+    -moz-justify-content: center
+    -webkit-justify-content: center
+    justify-content: center
+    text-align: center
+
+    .not-found-icon
+        max-width: 250px
+        max-height: 250px
+        -moz-transition: transform 300ms ease-in-out
+        -webkit-transition: transform 300ms ease-in-out
+        transition: transform 300ms ease-in-out
+
+        &:hover
+            -moz-transform: scale(.9)
+            -ms-transform: scale(.9)
+            -webkit-transform: scale(.9)
+            transform: scale(.9)
+
+            + hgroup h1
+                margin-top: 20px
+                margin-bottom: 40px
+
+    hgroup
+        h1
+            font-size: 3.5rem
+            margin-top: 40px
+            margin-bottom: 20px
+            color: $not-found
+            -moz-transition: all 350ms ease-in-out
+            -webkit-transition: all 350ms ease-in-out
+            transition: all 350ms ease-in-out
+
+        h4
+            font-size: 1.5rem
+            margin-bottom: 30px
+            font-weight: 400
+            color: transparentize($not-found, .5)
+
+    p
+        font-size: 1rem
+        margin-bottom: 30px
+        color: transparentize($not-found, .2)
+
+    a
+        text-decoration: none
+        text-transform: uppercase
+        letter-spacing: 5px
+        color: transparentize($not-found, .5)
+        -moz-transition: color 200ms linear
+        -webkit-transition: color 200ms linear
+        transition: color 200ms linear
+
+        &:hover
+            color: $not-found
